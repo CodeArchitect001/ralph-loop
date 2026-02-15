@@ -18,3 +18,9 @@
 - 错误率颜色标识：<1% 绿色，1-5% 黄色，>5% 红色
 - 使用纯 HTML/CSS，无外部依赖，内联样式
 - 测试命令验证 generate_report() 可正常生成文件
+
+[2026-02-15] Story 4 completed: 实现 CLI 接口
+- 使用 argparse 处理命令行参数
+- 支持 --input, --output, --window-size, --verbose 参数
+- 返回码：0 成功，1 文件不存在，2 解析错误
+- 整合 parser, analyzer, reporter 模块

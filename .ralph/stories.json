@@ -52,7 +52,7 @@
         "返回码：成功 0，文件不存在 1，解析错误 2"
       ],
       "test_command": "python -m src.cli --input tests/data/raw_logs.jsonl --output /tmp/test_report.html && test -f /tmp/test_report.html",
-      "passes": false
+      "passes": true
     },
     {
       "id": 5,
