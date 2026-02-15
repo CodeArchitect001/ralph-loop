@@ -1,0 +1,7 @@
+[2025-02-15 17:24] Story 1 completed: 实现 src/parser.py JSONL 解析器
+- 提供 parse_line() 和 parse_file() 两个函数
+- 使用 try-except 捕获 json.JSONDecodeError 处理损坏行
+- 验证必需字段 (timestamp, level, service, latency_ms, msg)
+- 损坏行信息输出到 stderr 不中断处理
+- 21 行测试数据，成功解析 19 条（第3行缺少闭合括号，第8行是 broken json）
+- 8 个测试用例全部通过

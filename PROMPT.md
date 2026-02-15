@@ -16,10 +16,13 @@
    - 将该 story 的 `passes` 改为 `true`
    - 在 progress.txt 追加：`[timestamp] Story X completed: [关键实现细节，遇到什么问题，如何解决]`
 6. **结束（重要！）**：
-   - 完成 1 个 story 后，**立即停止**，输出：`<promise>DONE</promise>`
+   - 完成 1 个 story 后，**立即停止**
+   - 输出完成标记，然后**不要再做任何事**
    - **不要继续处理下一个 story**
    - 下一个 story 由外部脚本启动新会话处理
-   - 只有当没有任何 `passes: false` 的 story 时，才输出：`<promise>COMPLETE</promise>`
+   - 标记：
+     - 完成 1 个 story：输出 `<promise>DONE</promise>`
+     - 全部完成：输出 `<promise>COMPLETE</promise>`
 
 ## 代码规范
 
