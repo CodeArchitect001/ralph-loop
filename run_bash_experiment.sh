@@ -6,7 +6,7 @@
 # - 需要重新读取 stories.json 和 progress.txt
 # - 模拟真实的迭代开发场景
 
-set -e
+# 注意：不要用 set -e，否则 claude 返回非零退出码时脚本会停止
 
 PROJECT_DIR=~/ralph-log-analyzer
 cd "$PROJECT_DIR"

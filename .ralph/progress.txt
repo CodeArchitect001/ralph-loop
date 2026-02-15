@@ -4,3 +4,11 @@
 - 损坏 JSON 行被跳过，错误输出到 stderr
 - 测试文件 tests/test_parser.py 包含 8 个测试用例全部通过
 - 成功跳过测试数据中的第 3 行和第 8 行损坏 JSON
+
+[2026-02-15 17:50:00] Story 2 completed: 实现了流式分析引擎 (src/analyzer.py)
+- LogAnalyzer 类：支持 add_record() 逐条处理和 get_stats() 获取结果
+- percentile() 函数：使用 sorted 计算百分位数，无外部依赖
+- 统计指标：total_logs, error_count, error_rate%, 各服务 p50/p99 延迟
+- 使用 defaultdict 按服务分组收集延迟数据
+- 处理空输入返回初始状态，不报错
+- 测试文件 tests/test_analyzer.py 包含 14 个测试用例全部通过

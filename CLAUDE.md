@@ -131,6 +131,19 @@ cat PROMPT.md | claude --print
 cat PROMPT.md | claude --print --dangerously-skip-permissions
 ```
 
+### 坑 4: 脚本执行一次就停止，不会继续循环
+
+**问题**: Claude 完成一个任务后退出，脚本也跟着停止了，不会自动启动下一个任务。
+
+**原因**: 脚本开头有 `set -e`，任何命令返回非零退出码时脚本就会停止。`claude --print` 可能返回非零退出码。
+
+**解决**: 移除 `set -e`。
+
+```diff
+- set -e
++ # 注意：不要用 set -e，否则 claude 返回非零退出码时脚本会停止
+```
+
 ### 最终正确的调用方式
 
 ```bash
@@ -141,3 +154,5 @@ cat PROMPT.md | claude --print --dangerously-skip-permissions
 |------|------|
 | `--print` | 非交互模式，输出后自动退出 |
 | `--dangerously-skip-permissions` | 跳过权限检查，无需人工授权 |
+
+**脚本注意**: 不要使用 `set -e`，否则循环会中断。
