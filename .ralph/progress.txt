@@ -1,0 +1,6 @@
+[2026-02-15 17:44:14] Story 1 completed: 实现了 JSONL 解析器 (src/parser.py)
+- parse_line(): 单行解析，返回 Optional[Dict]
+- parse_file(): 批量解析，返回 List[Dict]
+- 损坏 JSON 行被跳过，错误输出到 stderr
+- 测试文件 tests/test_parser.py 包含 8 个测试用例全部通过
+- 成功跳过测试数据中的第 3 行和第 8 行损坏 JSON
