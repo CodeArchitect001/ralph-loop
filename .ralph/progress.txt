@@ -1,0 +1,1 @@
+[2026-02-15] Story 1 completed: Implemented JSONL parser with parse_line() and parse_file() functions. Successfully handles corrupted JSON lines (3 and 8) by logging to stderr and continuing. All 6 test cases pass. Used json.JSONDecodeError for error handling and validated required fields.
