@@ -5,3 +5,10 @@
 - 损坏行输出警告到 stderr 但不中断处理
 - 测试数据第3行和第8行为损坏 JSON，成功跳过
 - 9 个测试全部通过
+
+[2026-02-15] Story 2 completed: 实现流式分析引擎
+- 实现 LogAnalyzer 类，支持 add_record() 和 get_stats()
+- 使用 sorted() 计算百分位数，避免 numpy 依赖
+- 统计指标：total_logs, error_count, error_rate%, 各服务 p50/p99 延迟
+- 使用 defaultdict 收集各服务延迟数据
+- 12 个测试全部通过

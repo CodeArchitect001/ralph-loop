@@ -26,7 +26,7 @@
         "处理空输入不报错"
       ],
       "test_command": "python -m pytest tests/test_analyzer.py -v",
-      "passes": false
+      "passes": true
     },
     {
       "id": 3,
