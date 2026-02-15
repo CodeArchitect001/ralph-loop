@@ -12,3 +12,9 @@
 - 统计指标：total_logs, error_count, error_rate%, 各服务 p50/p99 延迟
 - 使用 defaultdict 收集各服务延迟数据
 - 12 个测试全部通过
+
+[2026-02-15] Story 3 completed: 实现 HTML 报告生成器
+- 生成包含标题、统计摘要卡片、服务详情表格的 HTML
+- 错误率颜色标识：<1% 绿色，1-5% 黄色，>5% 红色
+- 使用纯 HTML/CSS，无外部依赖，内联样式
+- 测试命令验证 generate_report() 可正常生成文件
