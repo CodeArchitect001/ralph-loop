@@ -1,12 +1,25 @@
 # 项目记忆 - Ralph Loop 实验
 
+## 核心思想
+
+**Ralph Loop 的本质**：每次启动 Claude Code 都是**全新会话**，无上下文记忆。
+
+```
+启动 → 完成 Story 1 → 退出 → 启动新窗口 → 完成 Story 2 → 退出 → ...
+```
+
+每次会话需要：
+1. 读取 `.ralph/stories.json` 找到下一个任务
+2. 读取 `.ralph/progress.txt` 了解之前做了什么
+3. 从零开始理解项目状态
+
 ## 实验目的
 
 对比两种 AI 辅助开发模式的效率和效果：
 
 | 方法 | 描述 |
 |------|------|
-| **方法 A (Bash 版)** | 通过 shell 脚本循环调用 Claude Code，每次处理一个 story |
+| **方法 A (Bash 版)** | shell 脚本循环启动独立的 Claude Code 会话 |
 | **方法 B (官方插件版)** | 使用 `/ralph-loop` 命令 |
 
 ## 实验流程
