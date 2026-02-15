@@ -1,0 +1,21 @@
+{"timestamp": "2025-01-15T10:23:45", "level": "ERROR", "service": "payment", "latency_ms": 1250, "msg": "timeout"}
+{"timestamp": "2025-01-15T10:23:45", "level": "INFO", "service": "auth", "latency_ms": 23, "msg": "token_valid"}
+{"timestamp": "2025-01-15T10:23:46", "level": "WARN", "service": "payment", "latency_ms": 890, "msg": "slow_query"
+{"timestamp": "2025-01-15T10:23:46", "level": "ERROR", "service": "db", "latency_ms": 5000, "msg": "connection_lost"}
+{"timestamp": "2025-01-15T10:23:47", "level": "INFO", "service": "user", "latency_ms": 45, "msg": "login"}
+{"timestamp": "2025-01-15T10:23:47", "level": "INFO", "service": "payment", "latency_ms": 120, "msg": "processed"}
+{"timestamp": "2025-01-15T10:23:48", "level": "ERROR", "service": "auth", "latency_ms": 3000, "msg": "rate_limited"}
+{"timestamp": "broken json here
+{"timestamp": "2025-01-15T10:23:49", "level": "INFO", "service": "user", "latency_ms": 30, "msg": "logout"}
+{"timestamp": "2025-01-15T10:23:49", "level": "WARN", "service": "cache", "latency_ms": 600, "msg": "miss"}
+{"timestamp": "2025-01-15T10:23:50", "level": "ERROR", "service": "payment", "latency_ms": 2100, "msg": "declined"}
+{"timestamp": "2025-01-15T10:23:50", "level": "INFO", "service": "auth", "latency_ms": 15, "msg": "check"}
+{"timestamp": "2025-01-15T10:23:51", "level": "INFO", "service": "db", "latency_ms": 80, "msg": "select"}
+{"timestamp": "2025-01-15T10:23:51", "level": "ERROR", "service": "user", "latency_ms": 4500, "msg": "timeout"}
+{"timestamp": "2025-01-15T10:23:52", "level": "INFO", "service": "payment", "latency_ms": 200, "msg": "refund"}
+{"timestamp": "2025-01-15T10:23:52", "level": "WARN", "service": "auth", "latency_ms": 750, "msg": "retry"}
+{"timestamp": "2025-01-15T10:23:53", "level": "INFO", "service": "cache", "latency_ms": 5, "msg": "hit"}
+{"timestamp": "2025-01-15T10:23:53", "level": "ERROR", "service": "db", "latency_ms": 3200, "msg": "deadlock"}
+{"timestamp": "2025-01-15T10:23:54", "level": "INFO", "service": "user", "latency_ms": 60, "msg": "view"}
+{"timestamp": "2025-01-15T10:23:54", "level": "INFO", "service": "payment", "latency_ms": 110, "msg": "webhook"}
+{"timestamp": "2025-01-15T10:23:55", "level": "ERROR", "service": "auth", "latency_ms": 2800, "msg": "invalid_key"}
