@@ -13,7 +13,7 @@
         "损坏行记录到 stderr，但不中断处理"
       ],
       "test_command": "python -m pytest tests/test_parser.py -v",
-      "passes": true
+      "passes": false
     },
     {
       "id": 2,

@@ -61,9 +61,9 @@ for s in stories:
   echo "[启动前] 代码行数: $lines_before" | tee -a experiment_a.log
 
   # 启动新的 Claude Code 会话
-  # 使用 -p 和 --print 非交互模式，完成后自动退出
+  # 使用 --print 非交互模式，完成后自动退出
   # 关键：每次都是全新会话，无上下文记忆
-  claude code -p "$(cat PROMPT.md)" --print
+  cat PROMPT.md | claude --print
 
   # 记录结束后的代码行数
   lines_after=$(wc -l src/*.py 2>/dev/null | tail -1 | awk '{print $1}' || echo "0")
