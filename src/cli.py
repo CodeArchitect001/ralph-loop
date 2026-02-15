@@ -68,7 +68,8 @@ def main(args: List[str] = None) -> int:
     if parsed_args.window_size is not None and parsed_args.window_size > 0:
         records = records[-parsed_args.window_size:]
         if parsed_args.verbose:
-            print(f'Processing last {len(records)} records (window size: {parsed_args.window_size})')
+            print(f'Processing last {len(records)} records '
+                  f'(window size: {parsed_args.window_size})')
 
     # 检查是否有有效记录
     if not records:
@@ -92,7 +93,8 @@ def main(args: List[str] = None) -> int:
         stats = analyzer.get_stats()
 
         if parsed_args.verbose:
-            print(f'Analysis complete: {stats["total_logs"]} logs, {stats["error_rate"]:.2f}% error rate')
+            print(f'Analysis complete: {stats["total_logs"]} logs, '
+                  f'{stats["error_rate"]:.2f}% error rate')
 
     # 生成报告
     if parsed_args.verbose:

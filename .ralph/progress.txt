@@ -24,3 +24,10 @@
 - 支持 --input, --output, --window-size, --verbose 参数
 - 返回码：0 成功，1 文件不存在，2 解析错误
 - 整合 parser, analyzer, reporter 模块
+
+[2026-02-15] Story 5 completed: 端到端集成与测试
+- 完整流程验证通过：CLI 可生成 final_report.html
+- 添加 conftest.py 解决 pytest 模块导入问题
+- 修复 pylint 警告，评分从 9.36 提升到 9.86
+- 21 个测试全部通过
+- README.md 已包含完整使用说明

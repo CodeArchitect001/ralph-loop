@@ -65,7 +65,7 @@
         "README.md 包含使用说明和示例输出截图"
       ],
       "test_command": "pylint src/ --fail-under=8.0 && pytest tests/ -v",
-      "passes": false
+      "passes": true
     }
   ]
 }
