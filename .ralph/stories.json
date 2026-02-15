@@ -13,7 +13,7 @@
         "损坏行记录到 stderr，但不中断处理"
       ],
       "test_command": "python -m pytest tests/test_parser.py -v",
-      "passes": false
+      "passes": true
     },
     {
       "id": 2,
@@ -26,7 +26,7 @@
         "处理空输入不报错"
       ],
       "test_command": "python -m pytest tests/test_analyzer.py -v",
-      "passes": false
+      "passes": true
     },
     {
       "id": 3,
@@ -39,7 +39,7 @@
         "输出路径通过参数指定，默认 report.html"
       ],
       "test_command": "python -c \"from src.reporter import generate_report; generate_report({'total': 100}, 'test.html')\" && test -f test.html",
-      "passes": false
+      "passes": true
     },
     {
       "id": 4,
@@ -52,7 +52,7 @@
         "返回码：成功 0，文件不存在 1，解析错误 2"
       ],
       "test_command": "python -m src.cli --input tests/data/raw_logs.jsonl --output /tmp/test_report.html && test -f /tmp/test_report.html",
-      "passes": false
+      "passes": true
     },
     {
       "id": 5,
@@ -65,7 +65,7 @@
         "README.md 包含使用说明和示例输出截图"
       ],
       "test_command": "pylint src/ --fail-under=8.0 && pytest tests/ -v",
-      "passes": false
+      "passes": true
     }
   ]
 }

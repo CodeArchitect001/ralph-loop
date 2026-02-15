@@ -1,8 +1,7 @@
 """Streaming analysis engine for log stream analyzer."""
 
-import heapq
 from collections import defaultdict
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 
 class LogAnalyzer:

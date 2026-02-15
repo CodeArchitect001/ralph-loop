@@ -58,8 +58,8 @@ class TestParseFile:
         filepath = os.path.join(os.path.dirname(__file__), 'data', 'raw_logs.jsonl')
         records = parse_file(filepath)
 
-        # Should have 20 valid records (21 lines minus 1 broken)
-        assert len(records) == 20
+        # Should have 19 valid records (21 lines minus 2 broken at lines 3 and 8)
+        assert len(records) == 19
 
     def test_parse_file_handles_broken_lines(self):
         """Test that broken lines are skipped without error."""

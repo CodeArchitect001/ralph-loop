@@ -1,14 +1,14 @@
 """CLI interface for log stream analyzer."""
 
 import argparse
-import sys
 import os
+import sys
 
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.parser import parse_file
 from src.analyzer import LogAnalyzer
+from src.parser import parse_file
 from src.reporter import generate_report
 
 
@@ -90,7 +90,8 @@ Examples:
         stats = analyzer.get_stats()
 
         if args.verbose:
-            print(f"Analysis complete: {stats['total_logs']} logs, {stats['error_rate']:.2f}% error rate")
+            rate = stats['error_rate']
+            print(f"Analysis complete: {stats['total_logs']} logs, {rate:.2f}% error rate")
 
         # Generate report
         if args.verbose:
@@ -99,14 +100,14 @@ Examples:
         generate_report(stats, args.output)
 
         if args.verbose:
-            print(f"Report generated successfully!")
+            print("Report generated successfully!")
 
         return 0
 
     except FileNotFoundError:
         print(f"Error: File not found: {args.input}", file=sys.stderr)
         return 1
-    except Exception as e:
+    except (IOError, ValueError, KeyError) as e:
         print(f"Error during processing: {e}", file=sys.stderr)
         return 2
 

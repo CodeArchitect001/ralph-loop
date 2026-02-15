@@ -138,8 +138,8 @@ class TestLogAnalyzer:
 
         stats = analyzer.get_stats()
 
-        # Verify we processed all valid records
-        assert stats['total_logs'] == 20
+        # Verify we processed all valid records (19 valid out of 21 lines)
+        assert stats['total_logs'] == 19
 
         # Verify we have multiple services
         assert len(stats['services']) >= 4

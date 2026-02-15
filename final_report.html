@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Stream Analyzer Report</title>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; margin: 0; padding: 20px; background-color: #f5f5f5;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h1 style="color: #333; margin-bottom: 30px;">Log Stream Analyzer Report</h1>
+
+        <!-- Summary Cards -->
+        <div style="display: flex; gap: 20px; margin-bottom: 30px; flex-wrap: wrap;">
+            <!-- Total Logs Card -->
+            <div style="background: white; border-radius: 8px; padding: 20px; flex: 1; min-width: 200px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div style="color: #666; font-size: 14px; margin-bottom: 8px;">Total Logs</div>
+                <div style="font-size: 32px; font-weight: bold; color: #333;">19</div>
+            </div>
+
+            <!-- Error Rate Card -->
+            <div style="background: white; border-radius: 8px; padding: 20px; flex: 1; min-width: 200px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div style="color: #666; font-size: 14px; margin-bottom: 8px;">Error Rate</div>
+                <div style="font-size: 32px; font-weight: bold; color: #dc3545;">36.84%</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;">7 errors</div>
+            </div>
+
+            <!-- Max P99 Latency Card -->
+            <div style="background: white; border-radius: 8px; padding: 20px; flex: 1; min-width: 200px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div style="color: #666; font-size: 14px; margin-bottom: 8px;">Max P99 Latency</div>
+                <div style="font-size: 32px; font-weight: bold; color: #333;">4964 ms</div>
+            </div>
+
+            <!-- Services Count Card -->
+            <div style="background: white; border-radius: 8px; padding: 20px; flex: 1; min-width: 200px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div style="color: #666; font-size: 14px; margin-bottom: 8px;">Services</div>
+                <div style="font-size: 32px; font-weight: bold; color: #333;">5</div>
+            </div>
+        </div>
+
+        <!-- Services Table -->
+        <div style="background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h2 style="color: #333; margin-top: 0;">Service Details</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: #f8f9fa;">
+                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Service</th>
+                        <th style="padding: 12px; text-align: center; border-bottom: 2px solid #ddd;">Count</th>
+                        <th style="padding: 12px; text-align: center; border-bottom: 2px solid #ddd;">P50 Latency</th>
+                        <th style="padding: 12px; text-align: center; border-bottom: 2px solid #ddd;">P99 Latency</th>
+                        <th style="padding: 12px; text-align: center; border-bottom: 2px solid #ddd;">Min</th>
+                        <th style="padding: 12px; text-align: center; border-bottom: 2px solid #ddd;">Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd;">auth</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">5</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">750 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">2992 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">15 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">3000 ms</td>
+        </tr>
+        <tr>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd;">cache</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">2</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">302 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">594 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">5 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">600 ms</td>
+        </tr>
+        <tr>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd;">db</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">3</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">3200 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">4964 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">80 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">5000 ms</td>
+        </tr>
+        <tr>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd;">payment</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">5</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">200 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">2066 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">110 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">2100 ms</td>
+        </tr>
+        <tr>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd;">user</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">4</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">52 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">4366 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">30 ms</td>
+            <td style="padding: 12px; border-bottom: 1px solid #ddd; text-align: center;">4500 ms</td>
+        </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <div style="margin-top: 30px; color: #888; font-size: 12px; text-align: center;">
+            Generated by Log Stream Analyzer
+        </div>
+    </div>
+</body>
+</html>
