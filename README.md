@@ -81,6 +81,34 @@ Generates an HTML report with:
   - Yellow: Error rate 1-5%
   - Red: Error rate > 5%
 
+### Example Output
+
+When run with the test data:
+```bash
+python -m src.cli --input tests/data/raw_logs.jsonl --output final_report.html --verbose
+```
+
+Output:
+```
+Reading logs from: tests/data/raw_logs.jsonl
+Parsed 19 log records
+Analyzing logs...
+Analysis complete:
+  - Total logs: 19
+  - Error rate: 36.84%
+  - Services: 5
+Generating report: final_report.html
+✓ Report generated successfully!
+```
+
+The generated `final_report.html` includes:
+- **Total Logs**: 19
+- **Error Rate**: 36.84% (displayed in red due to high error rate)
+- **Overall P99 Latency**: 5000.00ms (from db service)
+- **Services**: auth, cache, db, payment, user (with individual P50/P99 latencies)
+
+The report features a modern gradient design with interactive hover effects and responsive layout.
+
 ## Running Tests
 
 ```bash

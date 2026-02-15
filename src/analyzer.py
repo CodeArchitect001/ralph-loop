@@ -3,7 +3,6 @@ Log Analyzer Module
 Streaming analysis engine for computing log statistics.
 """
 
-import heapq
 from collections import defaultdict
 from typing import Dict, List
 

@@ -47,7 +47,7 @@ def _generate_html(stats: Dict) -> str:
 
     # Calculate overall P99 (max across all services)
     overall_p99 = max(
-        [s.get('p99', 0) for s in services.values()]
+        s.get('p99', 0) for s in services.values()
     ) if services else 0.0
 
     html = f"""<!DOCTYPE html>
@@ -244,10 +244,9 @@ def _get_error_rate_color(error_rate: float) -> str:
     """
     if error_rate < 1.0:
         return '#4caf50'  # Green
-    elif error_rate < 5.0:
+    if error_rate < 5.0:
         return '#ff9800'  # Yellow/Orange
-    else:
-        return '#f44336'  # Red
+    return '#f44336'  # Red
 
 
 def _generate_service_rows(services: Dict) -> str:

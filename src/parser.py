@@ -26,9 +26,9 @@ def parse_line(line: str, line_number: int = 0) -> Optional[Dict]:
         required_fields = ['timestamp', 'level', 'service', 'latency_ms', 'msg']
         if all(field in data for field in required_fields):
             return data
-        else:
-            print(f"Warning: Line {line_number} missing required fields", file=sys.stderr)
-            return None
+
+        print(f"Warning: Line {line_number} missing required fields", file=sys.stderr)
+        return None
 
     except json.JSONDecodeError as e:
         print(f"Warning: Corrupted JSON at line {line_number}: {str(e)}", file=sys.stderr)

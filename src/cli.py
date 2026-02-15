@@ -78,7 +78,9 @@ Examples:
         if parsed_args.window_size is not None:
             records = records[-parsed_args.window_size:]
             if parsed_args.verbose:
-                print(f"Analyzing last {len(records)} records (window size: {parsed_args.window_size})")
+                window_msg = f"Analyzing last {len(records)} records "
+                window_msg += f"(window size: {parsed_args.window_size})"
+                print(window_msg)
 
         # Step 3: Analyze logs
         if parsed_args.verbose:
@@ -91,7 +93,7 @@ Examples:
         stats = analyzer.get_stats()
 
         if parsed_args.verbose:
-            print(f"Analysis complete:")
+            print("Analysis complete:")
             print(f"  - Total logs: {stats['total_logs']}")
             print(f"  - Error rate: {stats['error_rate']:.2f}%")
             print(f"  - Services: {len(stats['services'])}")
@@ -103,7 +105,7 @@ Examples:
         generate_report(stats, parsed_args.output)
 
         if parsed_args.verbose:
-            print(f"✓ Report generated successfully!")
+            print("✓ Report generated successfully!")
 
         return 0
 
