@@ -15,10 +15,11 @@
 5. **更新状态**：
    - 将该 story 的 `passes` 改为 `true`
    - 在 progress.txt 追加：`[timestamp] Story X completed: [关键实现细节，遇到什么问题，如何解决]`
-   - git commit -m "feat: complete story X - [简述]"
-6. **结束判断**：
-   - 如果还有 `passes: false` 的 story，继续下一轮
-   - 如果全部完成，输出：<promise>COMPLETE</promise>
+6. **结束（重要！）**：
+   - 完成 1 个 story 后，**立即停止**，输出：`<promise>DONE</promise>`
+   - **不要继续处理下一个 story**
+   - 下一个 story 由外部脚本启动新会话处理
+   - 只有当没有任何 `passes: false` 的 story 时，才输出：`<promise>COMPLETE</promise>`
 
 ## 代码规范
 
@@ -36,5 +37,5 @@
 
 ## 完成标记
 
-全部 stories 完成后必须输出：
-<promise>COMPLETE</promise>
+- 完成 1 个 story 后输出：`<promise>DONE</promise>`
+- 全部 stories 完成后输出：`<promise>COMPLETE</promise>`
