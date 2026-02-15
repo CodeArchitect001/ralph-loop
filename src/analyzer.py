@@ -4,7 +4,6 @@
 计算统计指标：错误率、各服务 P99 延迟、日志总数。
 """
 
-import heapq
 from collections import defaultdict
 from typing import Dict, List, Any
 

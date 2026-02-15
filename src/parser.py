@@ -29,10 +29,9 @@ def parse_line(line: str) -> Optional[Dict]:
         required_fields = ['timestamp', 'level', 'service', 'latency_ms', 'msg']
         if all(field in record for field in required_fields):
             return record
-        else:
-            print(f"[PARSER] Missing required fields in line: {line[:50]}...",
-                  file=sys.stderr)
-            return None
+        print(f"[PARSER] Missing required fields in line: {line[:50]}...",
+              file=sys.stderr)
+        return None
     except json.JSONDecodeError as e:
         print(f"[PARSER] JSON decode error: {e} - line: {line[:50]}...",
               file=sys.stderr)
@@ -57,7 +56,7 @@ def parse_file(filepath: str) -> List[Dict]:
     records = []
 
     with open(filepath, 'r', encoding='utf-8') as f:
-        for line_num, line in enumerate(f, 1):
+        for line in f:
             record = parse_line(line)
             if record is not None:
                 records.append(record)
