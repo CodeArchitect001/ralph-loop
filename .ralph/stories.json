@@ -39,7 +39,7 @@
         "输出路径通过参数指定，默认 report.html"
       ],
       "test_command": "python -c \"from src.reporter import generate_report; generate_report({'total': 100}, 'test.html')\" && test -f test.html",
-      "passes": false
+      "passes": true
     },
     {
       "id": 4,
