@@ -1,0 +1,7 @@
+[2026-02-15] Story 1 completed: 实现 JSONL 解析器
+- 实现 parse_line() 单行解析，使用 json.loads 和异常处理
+- 实现 parse_file() 批量解析，跳过损坏的 JSON 行
+- 验证必需字段 (timestamp, level, service, latency_ms, msg)
+- 损坏行输出警告到 stderr 但不中断处理
+- 测试数据第3行和第8行为损坏 JSON，成功跳过
+- 9 个测试全部通过
